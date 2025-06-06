@@ -97,3 +97,10 @@ Poniższa tabela zawiera sugestie, jakie wartości początkowe mogą pomóc w os
 * [Wielowątkowość w Javie (Baeldung)](https://www.baeldung.com/java-concurrency)
 * [Przewodnik po JUnit 5 (Baeldung)](https://www.baeldung.com/junit-5)
 * [Budowanie projektu Java z Maven (Oficjalny tutorial)](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+
+### Zaawansowane Koncepcje i Dobre Praktyki
+* [Wprowadzenie do zasad S.O.L.I.D. (Baeldung)](https://www.baeldung.com/solid-principles)
+* [Przewodnik po podstawach Git (Atlassian)](https://www.atlassian.com/git/tutorials/what-is-git)
+* [Wzorce projektowe (TutorialsPoint)](https://www.tutorialspoint.com/design_pattern/index.htm)
+* [Przewodnik po Java Stream API (Baeldung)](https://www.baeldung.com/java-8-streams-introduction)
+* [Obsługa wyjątków w Javie (GeeksforGeeks)](https://www.geeksforgeeks.org/exceptions-in-java/)
