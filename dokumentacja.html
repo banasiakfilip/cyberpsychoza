@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentacja Projektu: Symulacja "W Wirze"</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            border-bottom: 3px solid #3498db;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaeaea;
+        }
+        p {
+            text-align: justify;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        thead tr {
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: left;
+        }
+        tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        tbody tr:hover {
+            background-color: #e8f4fd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dokumentacja Projektu: Symulacja "W Wirze"</h1>
+
+    <h2>a) Temat projektu</h2>
+    <p>Symulacja "W Wirze": Upadek Społeczeństwa Cyber. Projekt jest symulatorem społeczeństwa w cyberpunkowym świecie, modelującym jego ewolucję przez kolejne epoki pod wpływem różnych parametrów, zdarzeń losowych i wewnętrznych dynamik społecznych, prowadzących do różnych scenariuszy końcowych.</p>
+
+    <h2>b) Skład grupy projektowej z wyszczególnieniem lidera</h2>
+    <ul>
+        <li><strong>Lider Projektu:</strong> <code>Wiktoria Bala</code></li>
+        <li><strong>Członkowie Grupy:</strong>
+            <ul>
+                <li><code>Wiktoria Bala</code></li>
+                <li><code>Filip Banasiak</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>c) Opis zadania symulacji w języku naturalnym</h2>
+    <p>Zadaniem symulacji jest modelowanie dynamiki społeczeństwa w dystopijnym, cyberpunkowym świecie. Użytkownik na początku definiuje parametry startowe, takie jak całkowita liczebność populacji, procentowy podział na klasy społeczne (Elita, Klasa Średnia, Slumsy), początkowy poziom technologicznego zaawansowania (poziom implantów), dostęp do środków łagodzących negatywne skutki życia (dostęp do stabilizatorów) oraz siłę organów porządkowych (siła policji). Określa również liczbę epok, przez które symulacja ma przebiegać.</p>
+    <p>W każdej epoce symulacja oblicza zmiany w społeczeństwie. Występują zdarzenia losowe (np. pandemie, kryzysy energetyczne, odkrycia technologiczne, bunty, programy socjalne) oraz zdarzenia wieloetapowe (np. badanie artefaktu), które mają określony wpływ na parametry takie jak poziom degeneracji społeczeństwa, śmiertelność w poszczególnych klasach, siłę policji, poziom implantów i dostęp do stabilizatorów. Dodatkowo, wewnętrzne mechanizmy, takie jak korupcja w przerośniętej elicie, również wpływają na populację.</p>
+    <p>Symulacja śledzi ogólny poziom degeneracji społeczeństwa, który rośnie z czasem i pod wpływem negatywnych zdarzeń, ale może być częściowo redukowany przez siłę policji. Stan populacji, w tym jej liczebność i podział na klasy, jest dynamicznie aktualizowany.</p>
+    <p>Symulacja może zakończyć się na kilka sposobów:</p>
+    <ul>
+        <li>Osiągnięcie maksymalnego, krytycznego poziomu degeneracji.</li>
+        <li>Spadek całkowitej populacji poniżej progu krytycznego.</li>
+        <li>Całkowite zniszczenie Elity.</li>
+        <li>Dominacja Elity i marginalizacja pozostałych klas, prowadząca do powstania Cyber-Autokracji.</li>
+        <li>Upadek sił policyjnych i anarchia.</li>
+        <li>Osiągnięcie zdefiniowanej przez użytkownika liczby epok (zakończenie naturalne).</li>
+    </ul>
+    <p>Wyniki każdej epoki są logowane, a po zakończeniu symulacji generowany jest raport końcowy oraz wykresy przedstawiające zmiany kluczowych parametrów (całkowita populacja, poziom degeneracji, siła policji) w czasie. Interfejs graficzny użytkownika (GUI) pozwala na wprowadzanie parametrów, uruchamianie symulacji, obserwowanie jej postępów w czasie rzeczywistym oraz przeglądanie wyników.</p>
+
+    <h2>d) Diagram klas</h2>
+    <img src="images/diagram_klas.png" alt="Diagram Klas">
+
+    <h2>e) Diagram obiektów</h2>
+    <p>Przykład diagramu obiektów przedstawiający stan systemu w trakcie symulacji (np. w 5. epoce):</p>
+    <img src="images/diagram_obiektow.png" alt="Diagram Obiektów">
+
+    <h2>f) Diagram sekwencji</h2>
+    <h3>Scenariusz 1: Rozpoczęcie i przebieg jednej epoki symulacji (uproszczony)</h3>
+    <img src="images/diagram_sekwencji.png" alt="Diagram Sekwencji 1">
+
+    <h3>Scenariusz 2: Zakończenie symulacji i wyświetlenie wyników (uproszczony)</h3>
+    <img src="images/diagram_sekwencji_2.png" alt="Diagram Sekwencji 2">
+
+    <h2>g) Diagram maszyny stanów</h2>
+    <h3>Diagram maszyny stanów dla obiektu <code>Symulacja</code></h3>
+    <img src="images/diagram_maszyny_stanow.png" alt="Diagram Maszyny Stanów">
+
+    <h2>h) Dokumentacja wygenerowana na podstawie komentarzy w kodzie (JavaDoc)</h2>
+    <p>Pełna dokumentacja API została wygenerowana z komentarzy Javadoc w kodzie. Można ją pobrać poniżej:</p>
+    <p style="text-align: center; font-size: 1.2em;"><a href="JavaDoc.zip" download>Pobierz dokumentację Javadoc (plik .zip)</a></p>
+
+    <h1>Dokumentacja dodatkowa</h1>
+    <h2>Tabela zawierająca sugestie danych początkowych</h2>
+    <p>Poniższa tabela zawiera sugestie, jakie wartości początkowe mogą pomóc w osiągnięciu konkretnego scenariusza końca. Wyniki mogą się różnić z powodu losowości zdarzeń.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Scenariusz Końca</th>
+            <th>Sugerowane Wartości Początkowe</th>
+            <th>Uzasadnienie</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>Upadek cywilizacji (Max Degeneracja)</strong></td>
+            <td>Wysoki początkowy `% implantów` (np. 70-90%), Niski początkowy `% stabilizatorów` (np. 10-30%), Niska `Siła policji` (np. 20-40%), Średnia/wysoka `Populacja`</td>
+            <td>Wysoki poziom implantów przy niskim dostępie do stabilizatorów może generować specjalne negatywne zdarzenia. Niska siła policji oznacza mniejszą redukcję rosnącej degeneracji.</td>
+        </tr>
+        <tr>
+            <td><strong>Zagłada (Populacja poniżej progu)</strong></td>
+            <td>Bardzo niska `Siła policji` (np. 0-20%), Niska `Populacja początkowa` (np. 10000-20000), Niski `% stabilizatorów` (0-20%), Średni/wysoki `% implantów` (np. 50-70%)</td>
+            <td>Niska siła policji i mało stabilizatorów oznaczają większą śmiertelność w wyniku zdarzeń. Rozpoczynanie z małą populacją sprawia, że szybciej osiągnie się próg krytyczny.</td>
+        </tr>
+        <tr>
+            <td><strong>Brak przywództwa (Elita zniszczona)</strong></td>
+            <td>Bardzo niski `% elity` (np. 1-5%), Niska `Siła policji` (np. 10-30%), Wysoka podatność na negatywne zdarzenia dotykające elitę.</td>
+            <td>Mała początkowa liczba elity sprawia, że jest ona bardziej podatna na całkowite wyniszczenie przez zdarzenia losowe.</td>
+        </tr>
+        <tr>
+            <td><strong>Cyber-Autokracja (Dominacja Elity)</strong></td>
+            <td>Bardzo wysoki `% elity` (np. 70-80%), Wysoki `% klasy średniej` (np. 15-25%), Wysoka `Siła policji` (np. 70-90%), Wysoki `% stabilizatorów` i `% implantów`.</td>
+            <td>Silna elita i klasa średnia od początku, przy minimalnych slumsach. Wysoka siła policji i zasoby chronią dominujące klasy. Należy zbalansować z mechanizmem korupcji.</td>
+        </tr>
+        <tr>
+            <td><strong>Anarchia (Upadek sił policyjnych)</strong></td>
+            <td>Bardzo niska początkowa `Siła policji` (np. 10-20%), Niska ogólna stabilność (niski % stabilizatorów, wysoki % implantów).</td>
+            <td>Rozpoczynanie z niską siłą policji czyni ją podatną na spadek poniżej 10% w wyniku negatywnych zdarzeń.</td>
+        </tr>
+        <tr>
+            <td><strong>Zakończenie naturalne (Limit epok)</strong></td>
+            <td>Ustawienia zbalansowane: Średnia `Populacja`, Średni podział klas, Średnia/wysoka `Siła policji` (np. 50-70%), Średni/wysoki `% stabilizatorów` i `% implantów`. Duża `Liczba epok`.</td>
+            <td>Parametry, które pozwalają społeczeństwu przetrwać dłużej bez wpadania w skrajne scenariusze.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Linki do stron, które były pomocne w stworzeniu naszej symulacji</h2>
+
+    <h3>Zasoby dotyczące JavaFX i GUI</h3>
+    <ul>
+        <li><strong>Oficjalna dokumentacja OpenJFX (openjfx.io):</strong> Główne źródło informacji o JavaFX. <a href="https://openjfx.io/openjfx-docs/" target="_blank">Odwiedź stronę</a></li>
+        <li><strong>Using FXML to Create a User Interface (Oracle Help Center):</strong> Tutorial Oracle o tworzeniu UI z FXML. <a href="https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm" target="_blank">Odwiedź stronę</a></li>
+        <li><strong>FXML tutorial (javafx.pl):</strong> Polski tutorial wprowadzający do FXML. <a href="https://javafx.pl/fxml-tutorial-1-wprowadzenie/" target="_blank">Odwiedź stronę</a></li>
+    </ul>
+
+    <h3>Operacje na plikach i konsoli w Javie</h3>
+    <ul>
+        <li><strong>How to Write to a CSV File in Java (Baeldung):</strong> Zapisywanie danych do plików CSV. <a href="https://www.baeldung.com/java-csv" target="_blank">Odwiedź stronę</a></li>
+        <li><strong>ANSI Escape Codes - GitHub Gist (fnky):</strong> Lista kodów ANSI do formatowania tekstu w terminalu. <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797" target="_blank">Odwiedź stronę</a></li>
+    </ul>
+
+    <h2>Dodatkowe Zasoby (Koncepcje Podstawowe i Narzędzia)</h2>
+    <p>Poniżej znajduje się skrócona lista linków do zasobów omawiających ogólne koncepcje programowania obiektowego w Javie, a także narzędzia użyte w projekcie.</p>
+    <ul>
+        <li><a href="https://www.baeldung.com/java-polymorphism" target="_blank">Polimorfizm w Javie (Baeldung)</a></li>
+        <li><a href="https://www.digitalocean.com/community/tutorials/composition-vs-inheritance-in-java" target="_blank">Kompozycja vs Dziedziczenie (DigitalOcean)</a></li>
+        <li><a href="https://docs.oracle.com/javase/tutorial/collections/index.html" target="_blank">Java Collections Framework (Oracle)</a></li>
+        <li><a href="https://www.baeldung.com/java-concurrency" target="_blank">Wielowątkowość w Javie (Baeldung)</a></li>
+        <li><a href="https://www.baeldung.com/junit-5" target="_blank">Przewodnik po JUnit 5 (Baeldung)</a></li>
+        <li><a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html" target="_blank">Budowanie projektu Java z Maven (Oficjalny tutorial)</a></li>
+    </ul>
+
+</div>
+
+</body>
+</html>
